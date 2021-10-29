@@ -1,0 +1,5 @@
+package com.xoriant.banking.poc.dao.util;
+
+public class CommonMethods {
+
+}

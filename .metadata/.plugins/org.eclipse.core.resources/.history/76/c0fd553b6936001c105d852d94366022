@@ -1,0 +1,12 @@
+package com.xoriant.banking.poc.dao.util;
+
+public class DBQueries {
+
+	public final static String ALL_CUSTOMER_LIST="select * from customer";
+	public final static String VIEW_ACCOUNT_INFO="select * from account_details";
+	public static final String ADD_NEW_PERSON="insert into personinfo values(?,?,?,?,?,?,?,?,?)";
+	public static final String ADD_NEW_CUSTOMER="insert into customer values(?,?,?)";
+	public static final String ADD_NEW_MANAGER="insert into manager values(?,?,?)";
+	public static final String ADD_NEW_ADDRESS="insert into address values(?,?,?,?,?,?,?,?)";
+	public static final String ADD_NEW_BRANCH="insert into branch values(?,?,?,?)";
+}

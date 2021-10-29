@@ -1,0 +1,21 @@
+package com.xoriant.banking.poc.dao.util;
+
+public class CommonMethods {
+	
+     private static String CUSTOMERID; 
+     private static String MANAGERID;
+     private static String PERSONID;
+     private static String ADDRESSID;
+     
+	 public int getCustomerId() {
+		 
+		 String str ="10000";
+		 
+		 int random = (int)(Math.random()*(1000-100+1)+100);
+		 str= str+Integer.toString(random);
+		 CUSTOMERID=str;
+		 
+		 return Integer.parseInt(CUSTOMERID);
+		 
+	 }
+}

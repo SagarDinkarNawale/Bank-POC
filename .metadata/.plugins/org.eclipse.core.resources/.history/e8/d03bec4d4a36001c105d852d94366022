@@ -1,0 +1,31 @@
+package com.xoriant.banking.poc;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.xoriant.banking.poc.dao.ManagerDaoImpl;
+import com.xoriant.banking.poc.model.Branch;
+
+@SpringBootApplication
+//@EnableDiscoveryClient
+//@EnableFeignClients
+public class ManagerServiceApplication {
+
+	public static void main(String[] args) {
+		
+		
+		ApplicationContext ac = SpringApplication.run(ManagerServiceApplication.class, args);
+		
+		ManagerDaoImpl manager= ac.getBean(ManagerDaoImpl.class);
+		
+		Branch branch = new Branch();
+		branch.setBranchId(2);
+		branch.setBranchName("Wakad");
+		branch.setIfscCode("BKID000044");
+		branch.setMicrCode("BKID000044");
+		
+		manager.addNewBranch(branch);
+	}
+
+}

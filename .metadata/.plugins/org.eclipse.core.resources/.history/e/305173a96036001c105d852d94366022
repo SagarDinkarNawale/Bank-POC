@@ -1,0 +1,52 @@
+package com.xoriant.banking.poc.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Customer {
+	
+	private int customerId;
+	
+	private int personId;
+	
+	List<AccountDetails> accList = new ArrayList<AccountDetails>();
+
+	public Customer(int customerId, int personId, List<AccountDetails> accList) {
+		super();
+		this.customerId = customerId;
+		this.personId = personId;
+		this.accList = accList;
+	}
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public int getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(int personId) {
+		this.personId = personId;
+	}
+
+	public List<AccountDetails> getAccList() {
+		return accList;
+	}
+
+	public void setAccList(List<AccountDetails> accList) {
+		this.accList = accList;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", personId=" + personId + ", accList=" + accList + "]";
+	}
+
+	
+	
+}

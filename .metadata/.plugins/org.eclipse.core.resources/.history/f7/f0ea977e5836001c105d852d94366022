@@ -1,0 +1,31 @@
+package com.xoriant.banking.poc.model;
+
+public class Address {
+
+	private int addressId;
+	
+	private int doorNo;
+	
+	private String city;
+	
+	private String area;
+	
+	private String state;
+	
+	private String pincode;
+	
+	private String addressType;
+	
+	private int branchId;
+	
+	private int personId;
+	
+
+	public Address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

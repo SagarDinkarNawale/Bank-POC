@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Xoriant Bank of India</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- 
+   <link  rel="stylesheet" href="" th:href="@{/static/css/manager.css}" /> 
+  <link href="/static/css/manager.css" rel="stylesheet" /> -->
+
+
+<style type="text/css">
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+nav {
+	margin-top: 40px;
+	padding: 24px;
+	text-align: center;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+	background: #3fa46a;
+}
+
+nav a {
+	transition: 0.3s ease;
+	background: #3fa46a;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	padding: 20px 0;
+	margin: 0 5px;
+	font-size: 17px;
+}
+
+nav a:hover {
+	border-top: 4px solid white;
+	border-bottom: 4px solid white;
+	padding: 6px 0;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #3fa46a;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+
+ .container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+.three{
+  width:100px;
+  height:100px;
+}
+.content {
+color: Black;
+	text-align: center;
+	font-size: 20px;
+	 
+}
+
+ 
+
+
+  
+</style>
+ <script>
+ /*  $(document).find('a#someId').hide(); */
+ 
+</script>  
+</head>
+<body>
+
+	<nav id="someId">
+		<a href="#" pointer-events: none>Home ( Manager) <span class="sr-only">(current)</span></a> <a
+			href="#" pointer-events: none>Add Branch</a><a href="#">Add Person</a> <a href="#">Update Customer</a>
+		<a href="#" pointer-events: none>Delete Customer</a> <a href="#">Add Account</a> <a href="#">Edit Account</a>
+	 <a href="#">Delete Account</a>
+	 <a href="#">View Customer List</a>
+	 
+	 
+	 
+	</nav>
+	 <div class="content">
+      <h1> Manager Login Fails...</h1> 
+    </div>
+	
+	  <div class="three"> </div>
+	<div class="container">
+		 
+     <form action="#"  th:action="@{/home}" th:object="${managerAuth}" method="post">
+     
+   <div class="content">
+       Manager Login  details
+    </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" th:field="*{userName}" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" th:field="*{pass}" required>
+
+    <button type="submit">Login</button>
+    
+ 
+  </div>
+
+ 
+</form>
+	</div>
+	<div class="footer">
+		<p>&copy;2020 Copyright:Xoriantbankofindia.com</p>
+	</div>
+</body>
+</html>

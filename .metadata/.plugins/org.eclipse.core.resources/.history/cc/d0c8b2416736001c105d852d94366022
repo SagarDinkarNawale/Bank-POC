@@ -1,0 +1,46 @@
+package com.xoriant.banking.poc;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.ApplicationContext;
+
+import com.xoriant.banking.poc.dao.ManagerDaoImpl;
+import com.xoriant.banking.poc.model.Address;
+import com.xoriant.banking.poc.model.Gender;
+import com.xoriant.banking.poc.model.PersonInfo;
+import com.xoriant.banking.poc.model.Roles;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients
+public class ManagerServiceApplication {
+
+	public static void main(String[] args) {
+		
+		
+		
+		ApplicationContext ac = SpringApplication.run(ManagerServiceApplication.class, args);
+		
+		
+		  ManagerDaoImpl manager= ac.getBean(ManagerDaoImpl.class);
+		  
+			/*
+			 * Branch branch = new Branch(); branch.setBranchId(2);
+			 * branch.setBranchName("Wakad"); branch.setIfscCode("BKID000044");
+			 * branch.setMicrCode("BKID000044");
+			 * manager.addNewBranch(branch);
+			 */
+		  Gender gender = new Gender(1,"MALE");
+		  Roles roles = new Roles(1,"MANAGER");
+		  Address address = new Address(100,"Pune","Baner", "Maharashtra", "414592","CUSTOMER",1);
+		  PersonInfo personInfo = new PersonInfo("Somnath Devdhe",gender,"2021/11/26","9988334455",address,roles,"CUSTOMER");
+		  
+		  
+		  
+		  
+		 
+	}
+
+}

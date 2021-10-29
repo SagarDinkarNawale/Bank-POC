@@ -1,0 +1,11 @@
+package com.xoriant.banking.poc.model;
+
+public class Manager {
+	private int managerId;
+	
+	private int branchId;
+	
+	private int personId;
+	
+	
+}

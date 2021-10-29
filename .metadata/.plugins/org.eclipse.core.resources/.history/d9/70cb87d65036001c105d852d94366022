@@ -1,0 +1,136 @@
+package com.xoriant.banking.poc.model;
+
+import java.math.BigInteger;
+import java.time.LocalDateTime;
+
+public class PersonInfo {
+
+	private int personId;
+	
+	private String customerName;
+	
+	private int genderId;
+	
+	private LocalDateTime dob;
+	
+	private BigInteger mobNumber;
+	
+	private int addressId;
+	
+	private int customerId;
+	
+	private int managerId;
+	
+	private int role_id;
+	
+	private String personType;
+
+	public PersonInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public PersonInfo(int personId, String customerName, int genderId, LocalDateTime dob, BigInteger mobNumber,
+			int addressId, int customerId, int managerId, int role_id, String personType) {
+		super();
+		this.personId = personId;
+		this.customerName = customerName;
+		this.genderId = genderId;
+		this.dob = dob;
+		this.mobNumber = mobNumber;
+		this.addressId = addressId;
+		this.customerId = customerId;
+		this.managerId = managerId;
+		this.role_id = role_id;
+		this.personType = personType;
+	}
+
+	public int getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(int personId) {
+		this.personId = personId;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public int getGenderId() {
+		return genderId;
+	}
+
+	public void setGenderId(int genderId) {
+		this.genderId = genderId;
+	}
+
+	public LocalDateTime getDob() {
+		return dob;
+	}
+
+	public void setDob(LocalDateTime dob) {
+		this.dob = dob;
+	}
+
+	public BigInteger getMobNumber() {
+		return mobNumber;
+	}
+
+	public void setMobNumber(BigInteger mobNumber) {
+		this.mobNumber = mobNumber;
+	}
+
+	public int getAddressId() {
+		return addressId;
+	}
+
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
+	}
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public int getManagerId() {
+		return managerId;
+	}
+
+	public void setManagerId(int managerId) {
+		this.managerId = managerId;
+	}
+
+	public int getRole_id() {
+		return role_id;
+	}
+
+	public void setRole_id(int role_id) {
+		this.role_id = role_id;
+	}
+
+	public String getPersonType() {
+		return personType;
+	}
+
+	public void setPersonType(String personType) {
+		this.personType = personType;
+	}
+
+	@Override
+	public String toString() {
+		return "PersonInfo [personId=" + personId + ", customerName=" + customerName + ", genderId=" + genderId
+				+ ", dob=" + dob + ", mobNumber=" + mobNumber + ", addressId=" + addressId + ", customerId="
+				+ customerId + ", managerId=" + managerId + ", role_id=" + role_id + ", personType=" + personType + "]";
+	}
+	
+	
+}

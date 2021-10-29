@@ -1,0 +1,34 @@
+package com.xoriant.banking.poc.model;
+
+import java.math.BigInteger;
+import java.time.LocalDateTime;
+
+public class PersonInfo {
+
+	private int personId;
+	
+	private String personName;
+	
+	private Gender gender;
+	
+	private LocalDateTime dob;
+	
+	private BigInteger mobNumber;
+	
+	private Address address;
+	
+	private int role_id;
+	
+	private String personType;
+	
+	private int personTypeId;
+	
+
+	public PersonInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	
+}

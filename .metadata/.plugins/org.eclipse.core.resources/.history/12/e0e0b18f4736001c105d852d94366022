@@ -1,0 +1,30 @@
+package com.xoriant.banking.poc.dao;
+
+import java.sql.ResultSet;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.xoriant.banking.poc.dao.util.DBQueries;
+import com.xoriant.banking.poc.model.Branch;
+
+@Repository
+public class ManagerDaoImpl {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	public Branch addNewBranch(Branch branch) {
+		
+		int res = jdbcTemplate.update(DBQueries.ADD_NEW_BRANCH,branch.getBranchId(), branch.getBranchName(),
+				branch.getIfscCode(),branch.getMicrCode());
+
+		if (res != 0) {
+			return branch;
+		}
+
+		return null;	
+	}
+
+}

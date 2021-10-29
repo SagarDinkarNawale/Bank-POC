@@ -1,0 +1,17 @@
+package com.xoriant.banking.poc.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ManagerDaoImpl {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	
+	
+	
+	
+}
